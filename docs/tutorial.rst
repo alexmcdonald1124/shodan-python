@@ -51,13 +51,13 @@ Now that we have our API object all good to go, we're ready to perform a search:
 		results = api.search('apache')
 		
 		# Show the results
-		print 'Results found: %s' % results['total']
+		print('Results found: %s' % results['total'])
 		for result in results['matches']:
-			print 'IP: %s' % result['ip_str']
-			print result['data']
-			print ''
+			print('IP: %s' % result['ip_str'])
+			print(result['data'])
+			print('')
 	except shodan.APIError, e:
-		print 'Error: %s' % e
+		print('Error: %s' % e)
 
 Stepping through the code, we first call the :py:func:`Shodan.search` method on the `api` object which
 returns a dictionary of result information. We then print how many results were found in total,
@@ -101,16 +101,16 @@ To see what Shodan has available on a specific IP we can use the :py:func:`Shoda
 	host = api.host('217.140.75.46')
 	
 	# Print general info
-	print """
+	print("""
 		IP: %s
 		Organization: %s
 		Operating System: %s
-	""" % (host['ip_str'], host.get('org', 'n/a'), host.get('os', 'n/a'))
+	""" % (host['ip_str'], host.get('org', 'n/a'), host.get('os', 'n/a')))
 	
 	# Print all banners
 	for item in host['data']:
-		print """
+		print("""
 			Port: %s
 			Banner: %s
 			
-		""" % (item['port'], item['data'])
+		""" % (item['port'], item['data']))

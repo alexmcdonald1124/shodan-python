@@ -18,7 +18,7 @@ Basic Shodan Search
 	
 	# Input validation
 	if len(sys.argv) == 1:
-		print 'Usage: %s <search query>' % sys.argv[0]
+		print('Usage: %s <search query>' % sys.argv[0])
 		sys.exit(1)
 	
 	try:
@@ -31,7 +31,7 @@ Basic Shodan Search
 		
 		# Loop through the matches and print each IP
 		for service in result['matches']:
-			print service['ip_str']
+			print(service['ip_str'])
 	except Exception as e:
-		print 'Error: %s' % e
+		print('Error: %s' % e)
 		sys.exit(1)

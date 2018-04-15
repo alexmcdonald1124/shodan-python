@@ -9,3 +9,4 @@ tmp/*
 MANIFEST
 .vscode/
 PKG-INFO
+.DS_Store
